@@ -1,6 +1,6 @@
 enum Coin {
-  name = "CRA",
-  symbol = "CRA",
+  name = "MAM",
+  symbol = "MAM",
   katSayi = 8,
 }
 
