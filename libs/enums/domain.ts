@@ -4,7 +4,7 @@ enum DomainEnum {
   
   
 
-  address = "https://mamtech.vercel.io",
+  address = "https://mamtech.vercel.app",
 
 
   // token address = 0x481b39CA8d9Ea8443c32bF2C252232c18D3DDf50
