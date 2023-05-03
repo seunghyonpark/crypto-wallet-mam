@@ -150,7 +150,7 @@ export default function ReferralList() {
             const user = await res.json()
             setUser(user.user.user)
             setWallet(user.user.user.walletAddress)
-            setPromotionLink("https://craclegamez.io/myPage/register?referral=" + user.user.user.referralCode);
+            setPromotionLink("" + user.user.user.referralCode);
         }
     }
 

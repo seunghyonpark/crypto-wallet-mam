@@ -823,14 +823,14 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
           
                 <Link className='ml-3'
                   href={"/"}>
-                    <Image src={"/cracle_ci.png"} width={25} height={25} alt="logo" />
+                    <Image src={"/ci.png"} width={35} height={35} alt="logo" />
                 </Link>
 
 
 
                 {!user &&
                   <div className="flex w-[250px] items-center gap-2 text-white text-sm font-bold">
-                    CRACLE X2E
+                    MAM TECH
                   </div>
                 }
 

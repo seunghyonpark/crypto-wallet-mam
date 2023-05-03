@@ -289,7 +289,7 @@ export default function Navbar() {
                      
                      ">
                     <Link href={"/"} className="hover:opacity-50">
-                        <Image src={"/cracle_ci.png"} alt="" width={20} height={20} />
+                        <Image src={"/ci.png"} alt="" width={35} height={35} />
                     </Link>
 
                     {/*
@@ -298,7 +298,7 @@ export default function Navbar() {
 
                     
                     <div className="flex w-[250px] items-center justify-center text-white text-base font-bold">
-                        CRACLE X2E
+                        MAM TECH
                     </div>
             
                 </div>

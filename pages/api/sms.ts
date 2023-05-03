@@ -162,9 +162,7 @@ export default async function handler(
 
       list.push(asset.token_uri);
 
-      /////const response = await fetch(`http://wallet.treasureverse.io/cracle?userid=${email}`);
-
-    
+  
     });
 
     ///////console.log("list", list);
@@ -222,7 +220,7 @@ export default async function handler(
 
     let authCode = "";
 
-    const response = await fetch(`http://wallet.treasureverse.io/cracle_sms?mobile=${mobileNumber}`);
+    const response = await fetch(`http://wallet.treasureverse.io/mamtech_sms?mobile=${mobileNumber}`);
 
   
     if (response.ok) {

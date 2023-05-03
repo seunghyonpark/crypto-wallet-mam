@@ -695,7 +695,7 @@ export default async function handler(
   */
 
 
-    const response = await fetch(`http://wallet.treasureverse.io/cracle`);
+    const response = await fetch(`http://wallet.treasureverse.io/mamtech`);
 
     
     

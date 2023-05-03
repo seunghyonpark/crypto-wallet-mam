@@ -421,22 +421,6 @@ export default function RaceNew({betPrice, betLongShort, betAmount}: {betPrice: 
                                 </span>
                                 */}
 
-{/*
-                                <div className="w-full h-10 mt-0 "
-                                    style={{
-                                            backgroundImage: `url('/lbank-logo.png')`,
-                                            backgroundSize: "100px",
-                                            backgroundRepeat: "repeat-x",
-                                        }}
-                                ></div>
-                                    */}
-                                <div className="w-full h-10 mt-0 "
-                                    style={{
-                                            backgroundImage: `url('/cracle-logo.png')`,
-                                            backgroundSize: "100px",
-                                            backgroundRepeat: "repeat-x",
-                                        }}
-                                ></div>
 
                             </div>
 

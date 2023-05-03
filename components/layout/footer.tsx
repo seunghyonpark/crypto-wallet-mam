@@ -97,7 +97,7 @@ export default function Footer() {
                         <Image src={"/logo.png"} width="100" height="50" alt="logo" />
                     </div>
                     <div className='w-full flex flex-col'>
-                        <p>All Rights Reserved © 2023 Cracle</p>
+                        <p>All Rights Reserved © 2023 MAM Tech</p>
                     </div>
                 </div>
 
