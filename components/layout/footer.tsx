@@ -59,39 +59,6 @@ export default function Footer() {
                 ">
 
                 <div className='flex flex-col w-full p-10 text-gray-500 gap-5 bg-black'>
-                    {/*
-                    <Link href="/hipodrom" className='w-full'>
-                        <Image src={"/logo.png"} width="100" height="50" alt="logo" />
-                    </Link>
-                    */}
-
-
-                    <div className='w-full flex flex-row'>
- 
-                        {user &&
-                            <button
-                                className={` text-red-500`}
-                                onClick={() => {
-                                    deleteCookie('user');
-                                    router.push('/');
-                                }}
-                            >
-                                Log Out
-                            </button>
-                        }
-
-
-
-                        &nbsp;&nbsp;
-
-
-                        <Link href="/gameT2E/terms">
-                            Terms of Services
-                        </Link>
-
-
-                    </div>
-
 
                     <div className="w-full">
                         <Image src={"/logo.png"} width="50" height="50" alt="logo" />

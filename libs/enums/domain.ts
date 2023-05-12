@@ -1,10 +1,10 @@
 enum DomainEnum {
   
-  address = "http://localhost:3000",
+  ///address = "http://localhost:3000",
   
   
 
-  ///////address = "https://mamtech.vercel.app",
+  address = "https://mamtech.vercel.app",
 
 
   // token address = 0x481b39CA8d9Ea8443c32bF2C252232c18D3DDf50

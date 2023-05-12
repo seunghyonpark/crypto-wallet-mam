@@ -675,7 +675,7 @@ startTime=1611619200000
             <div className="
               w-[350px]
               lg:w-[800px]
-              h-[60px] flex flex-col items-left justify-start
+              h-[120px] flex flex-col items-left justify-start
               rounded-b-xl
               bg-gray-900
               ">
@@ -692,27 +692,17 @@ startTime=1611619200000
           </div>
 
 
-          <div className="w-[350px] mt-16 p-5 items-left justify-end
-            rounded-b-xl text-2xl font-bold text-white text-left
-            h-[60px]
-            bg-black
-            ">
-
-            GAMES
-          </div>
-
 </div>
 
 
-<div className="w-[350px] mt-16 p-5 items-left justify-end">
+<div className="w-[350px] h-[300px] mt-16 p-5 items-left justify-end">
 
-<Image
-  src="/metaverse.png"
-  alt="Picture of the author"
-  width={350}
-  height={120}
-/>
-
+  <Image
+    src="/metaverse.png"
+    alt="Picture of the author"
+    width={350}
+    height={120}
+  />
 
 </div>
 
