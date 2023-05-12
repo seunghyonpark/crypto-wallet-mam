@@ -400,17 +400,17 @@ export default function Navbar() {
                     <button
                       className="w-full text-white text-center justify-center p-5 items-center bg-red-900 hover:bg-[#141111] flex flex-row"
                       onClick={() => {
-                        setShowModal(false), router.push('/myPage/mynft')
+                        ///setShowModal(false), router.push('/myPage/mynft')
                       }}
                       >
                         <Image
-                            src={"/metamask-fox.svg"}
+                            src={"/logo.png"}
                             alt="meta-svg"
                             width={20}
                             height={20}
                         />
                         <h2 className="text-sm pl-3">
-                            <span className="text-[#f5841f]">METAMASK</span> CONNECT
+                            <span className="text-[#f5841f]">MENU</span>
                         </h2>
                     </button>
            

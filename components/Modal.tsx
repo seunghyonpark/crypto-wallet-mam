@@ -82,7 +82,7 @@ const StyledModalBody = styled.div`
 
 const StyledModal = styled.div`
   background: #24252F;
-  width: 250px;
+  width: 450px;
   height: 480px;
   border-radius: 15px;
   padding: 0px;
@@ -91,7 +91,7 @@ const StyledModal = styled.div`
 
 const StyledModalOverlay = styled.div`
   padding-top: 10px;
-  padding-right: 10px;
+  padding-right: 0px;
   opacity: 1;
   position: absolute;
   top: 0;
