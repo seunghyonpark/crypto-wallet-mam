@@ -438,7 +438,7 @@ export default function WithdrawRequestList() {
             <div className='flex flex-col p-10 mt-0 text-gray-200'>
 
                 <h1 className='font-bold italic text-2xl'>Withdraw Requests{" "}
-                <span className="text-sm text-red-500">(CRA)</span>{" "}
+                <span className="text-sm text-red-500">(MAM)</span>{" "}
                 </h1>
 
 
@@ -474,11 +474,11 @@ export default function WithdrawRequestList() {
                     />
 
                     <span className="ml-5 mr-5 content-center text-sm text-green-500">
-                        Withdraw amount is at least <br></br>1,000 ~ maximum 10,000 CRA at a time
+                        Withdraw amount is at least <br></br>1,000 ~ maximum 10,000 MAM at a time
                     </span>
 
                     <span className="ml-5 mr-5 content-center text-sm text-white">
-                        Withdraw Fee 100 CRA
+                        Withdraw Fee 100 MAM
                     </span>
 
 
@@ -486,7 +486,7 @@ export default function WithdrawRequestList() {
 
 {/*
                     <span className="ml-5 mr-5 content-center text-sm text-white">
-                        Receive Amount: {miktar - 100} CRA
+                        Receive Amount: {miktar - 100} MAM
                     </span>
 
                     */}
@@ -596,7 +596,7 @@ export default function WithdrawRequestList() {
 
                 <div className="text-sm">
                     <div className='text-white'>
-                    Requested CRA withdrawal is processed sequentially once a week.
+                    Requested MAM withdrawal is processed sequentially once a week.
                     </div>
 
                     <br></br>

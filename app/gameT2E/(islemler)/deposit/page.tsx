@@ -571,7 +571,7 @@ export default function Deposit() {
           {/* //? Matic Deposit  */}
           <div className="w-full border rounded-lg flex flex-col items-center justify-center p-2 gap-5 py-10">
             <h4 className=" ">
-              Deposit <span className="text-sm text-red-500">(CRA)</span>{" "}
+              Deposit <span className="text-sm text-red-500">(MAM)</span>{" "}
             </h4>
 
             <div className='w-full max-w-xs  relative  '>
@@ -621,7 +621,7 @@ export default function Deposit() {
           {/* //? Matic Withdraw */}
           <div className="w-full border rounded-lg flex flex-col items-center p-2 justify-center gap-5 py-10">
             <h4 className=" ">
-              Withdraw <span className="text-sm text-red-500">(CRA)</span>
+              Withdraw <span className="text-sm text-red-500">(MAM)</span>
 
             {/*  
               <span className="text-sm text-green-500">{`(${settings?.requestType === 'Matic' ? "BNB" : Coin.name})`}</span>{" "}

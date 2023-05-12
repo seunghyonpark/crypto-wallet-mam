@@ -29,8 +29,8 @@ import Modal from '../../components/Modal';
 import MyPage from '../MyPage';
 
 //@ts-ignore
-import { io } from "socket.io-client";
-import SocketEnum from '@/libs/enums/socket';
+////import { io } from "socket.io-client";
+////import SocketEnum from '@/libs/enums/socket';
 
 import Stack from "@mui/material/Stack";
 import Snackbar from "@mui/material/Snackbar";
@@ -694,6 +694,7 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
 
 
 
+    /*
     useEffect(() => socketInitializer(), []);
 
     const socketInitializer = () => {
@@ -742,7 +743,7 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
         //setErr(true);
         //❤️songpalabs❤️
 
-        setSuccessMsg(data.username + ": ❤️" + data.amount + "❤️ CRA");
+        setSuccessMsg(data.username + ": ❤️" + data.amount + "❤️ MAM");
         setSucc(true);
 
         //setCurrentPrice(data.price);
@@ -768,6 +769,7 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
 
 
     }
+    */
 
     const [succ, setSucc] = useState(false);
     const [err, setErr] = useState(false);
@@ -840,96 +842,11 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                 <div className='w-full p-2 flex items-center justify-end gap-3 '>
  
 
-                  {user && game?.selectedSide === "Long" &&
-                    <Image
-                      src={'/rabbit1.gif'}
-                      width={30}
-                      height={30}
-                      alt="game"
-                      className="rounded-md"
-                      onClick={() => {
-                        router.push('/gameT2E')
-                      }}
-                    />
-                  }
-
-                  {user && game?.selectedSide === "Short" &&
-                    <Image
-                      src={'/rabbit2.gif'}
-                      width={30}
-                      height={30}
-                      alt="game"
-                      className="rounded-md"
-                      onClick={() => {
-                        router.push('/gameT2E')
-                      }}
-                    />
-                  }
-
-                  {user && !game &&
-                    <Image
-                      src={user?.img}
-                      width={25}
-                      height={25}
-                      alt="pfp"
-                      className="rounded-md"
-                      onClick={() => {
-                        router.push('/gameT2E')
-                      }}
-                    />
-                  }
-
-                  
-
-
-
-                    {/*
-                        user && 
-                        <div className="flex flex-row">
-                        <Image
-                            src={'/metamask.png'}
-                            width={20}
-                            height={20}
-                            alt="pp"
-                            className="rounded-full"
-                        />
-                        
-                        <button
-                        className={` ml-2 text-[8px] text-orange-500 `}
-                        onClick={() => {
-                            //deleteCookie('user'), router.push('/')
-
-
-                            ///////////paraYatir();
-
-
-
-                        }}
-                        >
-                            Connect Wallet
-                        </button>
-
-
-
-
-
-
-                        </div>
-                      */}
-
-
 
                     {
                         user && <div
                             className={`flex items-center justify-center  bg-black rounded-md h-[38px] text-[15px] text-center px-2 ml-2 text-[#BA8E09] border border-[#BA8E09] `}
                         >
-
-                          <Link
-                              href={"/myPage/deposit"}
-                              className={"pr-3 "}
-                          >
-                              <Image src={"/wallet-icon-white.png"} width={15} height={50} alt="logo" />
-                          </Link>
 
                             {`${Number(user?.deposit).toFixed(0)}`}
                             
@@ -1039,7 +956,7 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                     />}
 
                     <div className="w-full rounded-lg flex flex-col items-center p-2 gap-1 ">
-                      <div className='text-xs'>Equity Value (CRA)</div>
+                      <div className='text-xs'>Equity Value (MAM)</div>
 
                       <div className='text-xl font-extrabold'>
                         {`${Number(user?.deposit).toFixed(0)}`}
@@ -1073,7 +990,7 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                         setShowModal(false), router.push('/myPage')
                     }}
                     >
-                      My Account
+                      My Page
                   </div>
 
                   <div
@@ -1100,32 +1017,10 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                         setShowModal(false), router.push('/myPage/betHistory')
                     }}
                     >
-                      Bet History
+                      History
                   </div>
 
 
-                  <div
-                    className={` disabled pt-1 w-full items-left text-base text-[#A9A9A9] `}
-                    onClick={() => {
-                        setShowModal(false), router.push('/')
-                    }}
-                    >
-                      Game Ranking
-                  </div>
-
-                  <div
-                    className={` pt-5 w-full items-left text-base text-white `}
-                    onClick={() => {
-                        setShowModal(false), router.push('/gameT2E/help')
-                    }}
-                    >
-                      How to Bet in T2E Game?<br></br>
-
-                      <Button variant="contained" color="primary" startIcon={<HelpCenter />}>
-                        Click Here
-                      </Button>
-
-                  </div>
 
 
 

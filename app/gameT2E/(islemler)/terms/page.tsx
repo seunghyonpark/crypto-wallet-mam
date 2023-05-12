@@ -543,7 +543,7 @@ export default function Terms() {
 
 {/*
             <h3>
-            You Earned {betAmount} $CRA
+            You Earned {betAmount} $MAM
             </h3>
             <h4>
               You Betted {bet}

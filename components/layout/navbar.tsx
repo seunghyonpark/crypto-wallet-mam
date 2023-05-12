@@ -19,8 +19,8 @@ import withReactContent from "sweetalert2-react-content";
 import Modal from '../../components/Modal';
 
 //@ts-ignore
-import { io } from "socket.io-client";
-import SocketEnum from '@/libs/enums/socket';
+////import { io } from "socket.io-client";
+////import SocketEnum from '@/libs/enums/socket';
 
 import Stack from "@mui/material/Stack";
 import Snackbar from "@mui/material/Snackbar";
@@ -49,7 +49,7 @@ export default function Navbar() {
     const [socket, setSocket] = useState<any>();
 
 
-
+    /*
     useEffect(() => socketInitializer(), []);
 
     const socketInitializer = () => {
@@ -100,7 +100,7 @@ export default function Navbar() {
         //setErr(true);
         //❤️songpalabs❤️
 
-        setSuccessMsg(data.username + ": ❤️" + data.amount + "❤️ CRA");
+        setSuccessMsg(data.username + ": ❤️" + data.amount + "❤️ MAM");
         setSucc(true);
 
         //setCurrentPrice(data.price);
@@ -137,7 +137,7 @@ export default function Navbar() {
         });
   
     }, [socket]);
-
+    */
 
 
     const [succ, setSucc] = useState(false);
@@ -229,7 +229,7 @@ export default function Navbar() {
 
 
 
-    
+    /*
     useEffect(() => {
 
         const getGame = async () => {
@@ -264,6 +264,7 @@ export default function Navbar() {
         
 
     },[status, user?.username]);
+    */
     
 
 
@@ -306,47 +307,6 @@ export default function Navbar() {
                 <div className="flex flex-col items-center justify-center w-full h-full ">
 
                     <div className="flex items-center justify-center w-full h-full bg-[#000000] px-3 ">
-                        
-                        <button className="hover:opacity-50">
-                            {user && game?.selectedSide === "Long" &&
-                                <Image
-                                src={'/rabbit1.gif'}
-                                width={35}
-                                height={35}
-                                alt="game"
-                                className="rounded-md"
-                                onClick={() => {
-                                    router.push('/gameT2E')
-                                }}
-                                />
-                            }
-
-                            {user && game?.selectedSide === "Short" &&
-                                <Image
-                                src={'/rabbit2.gif'}
-                                width={35}
-                                height={35}
-                                alt="game"
-                                className="rounded-md"
-                                onClick={() => {
-                                    router.push('/gameT2E')
-                                }}
-                                />
-                            }
-
-                            {user && !game &&
-                                <Image
-                                src={user?.img}
-                                width={30}
-                                height={30}
-                                alt="pfp"
-                                className="rounded-md"
-                                onClick={() => {
-                                    router.push('/gameT2E')
-                                }}
-                                />
-                            }
-                        </button>
 
                         <div className="flex items-center w-full justify-end gap-4">
 
@@ -354,13 +314,6 @@ export default function Navbar() {
                             user && <div
                                 className={`flex flex-row items-center justify-center  bg-black rounded-md h-[36px] text-center px-2 text-[#BA8E09] border border-[#BA8E09] `}
                             >
-
-                                <Link
-                                    className="pr-5 hover:opacity-50"
-                                    href={"/myPage/deposit"}
-                                >
-                                    <Image src={"/wallet-icon-white.png"} width={20} height={20} alt="logo" />
-                                </Link>
 
                                 {Number(user?.deposit).toFixed(0)}
                                 
@@ -482,7 +435,7 @@ export default function Navbar() {
                     />}
 
                     <div className="w-full rounded-lg flex flex-col items-center justify-left p-2 gap-1 ">
-                      <div className='text-xs'>Equity Value (CRA)</div>
+                      <div className='text-xs'>Equity Value (MAM)</div>
 
                       <div className='text-xl font-extrabold'>
                         {`${Number(user?.deposit).toFixed(0)}`}
@@ -518,7 +471,7 @@ export default function Navbar() {
                         setShowModal(false), router.push('/myPage')
                     }}
                     >
-                      My Account
+                      My Page
                   </div>
 
                   <div
@@ -545,31 +498,11 @@ export default function Navbar() {
                         setShowModal(false), router.push('/myPage/betHistory')
                     }}
                     >
-                      Bet History
+                      History
                   </div>
 
-                  <div
-                    className={` disabled pt-1 w-full items-left text-base text-[#A9A9A9]  `}
-                    onClick={() => {
-                        setShowModal(false), router.push('/')
-                    }}
-                    >
-                      Game Ranking
-                  </div>
 
-                  <div
-                    className={` pt-5 w-full items-left text-base text-white `}
-                    onClick={() => {
-                        setShowModal(false), router.push('/gameT2E/help')
-                    }}
-                    >
-                      How to Bet in T2E Game?<br></br>
-
-                      <Button variant="contained" color="primary" startIcon={<HelpCenter />}>
-                        Click Here
-                      </Button>
-
-                  </div>
+ 
 
               </div>
 

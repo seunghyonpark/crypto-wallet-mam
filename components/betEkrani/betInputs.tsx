@@ -80,7 +80,7 @@ export default function BetInputs({ horse1, horse2 }: any) {
                     }}
                         value={betAmount === 0 ? '' : betAmount}
                         type="number"
-                        placeholder='Enter your bet (CRA)'
+                        placeholder='Enter your bet (MAM)'
                         className='input w-full pl-20' />
                     <button onClick={() => { setBetAmount(0) }} className='absolute right-5 z-10 btn btn-xs btn-outline border-gray-700'>Clear</button>
                 </div>

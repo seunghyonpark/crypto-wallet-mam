@@ -178,7 +178,7 @@ export const newUser = async (
       userToken: userToken,
       ////walletAddress: walletAddress,
       nftWalletAddress: nftWalletAddress,
-      img: "/profile_default.gif",
+      img: "/profile_default.png",
       referralCode: referralCode,
       referral: referral,
     });
@@ -234,7 +234,7 @@ export const setUserByEmail = async (
       pass1: userToken,
       pass2: userToken,
       userToken: userToken,
-      img: "/profile_default.gif",
+      img: "/profile_default.png",
       referralCode: referralCode,
       authCode: authCode,
     });

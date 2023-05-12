@@ -712,7 +712,7 @@ const updateWalletAddress = async () => {
           <div className="w-full border rounded-lg flex flex-col items-center justify-top p-2 gap-5 py-10">
 
             <h4 className=" ">
-              Deposit <span className="text-sm text-red-500">(CRA)</span>{" "}
+              Deposit <span className="text-sm text-red-500">(MAM)</span>{" "}
             </h4>
 
             <div className='w-full max-w-xs md:w-1/2 '>
@@ -871,7 +871,7 @@ const updateWalletAddress = async () => {
           {/* //? Matic Withdraw */}
           <div className="w-full border rounded-lg flex flex-col items-center p-2 justify-center gap-5 py-10">
             <h4 className=" ">
-              Withdraw <span className="text-sm text-red-500">(CRA)</span>
+              Withdraw <span className="text-sm text-red-500">(MAM)</span>
 
             {/*  
               <span className="text-sm text-green-500">{`(${settings?.requestType === 'Matic' ? "BNB" : Coin.name})`}</span>{" "}
@@ -897,11 +897,11 @@ const updateWalletAddress = async () => {
 
 
             <span className="ml-5 mr-5 content-center text-sm text-green-500">
-                Withdraw amount is at least <br></br>1,000 ~ maximum 10,000 CRA at a time
+                Withdraw amount is at least <br></br>1,000 ~ maximum 10,000 MAM at a time
             </span>
 
             <span className="ml-5 mr-5 content-center text-sm text-white">
-                Withdraw Fee 100 CRA
+                Withdraw Fee 100 MAM
             </span>
  
 

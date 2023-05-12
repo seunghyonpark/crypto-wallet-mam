@@ -1,6 +1,6 @@
 'use client';
 
-import SocketEnum from '@/libs/enums/socket';
+///import SocketEnum from '@/libs/enums/socket';
 import React, { useEffect, useState, useMemo, useRef } from 'react';
 import Image from 'next/image';
 
@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
 //@ts-ignore
-import { io } from "socket.io-client";
+////import { io } from "socket.io-client";
 
 import API from '@/libs/enums/API_KEY';
 import { IUser } from '@/libs/interface/user';
@@ -125,6 +125,7 @@ export default function Home() {
 
 
     
+  /*
     useEffect(() => {
 
       const socketIo = io(`${SocketEnum.id}`, {
@@ -171,21 +172,11 @@ export default function Home() {
 
           setStatus(data);
 
-          /*
-          if (data === true) {
-              setBasePrice(currentPrice);
-          }
-          */
 
           //setStatus(true);
       });
 
-      /*
-      socketIo.on('time', (data: any) => {
-          console.log("Landing time", data);
-          setTime(data)
-      });
-      */
+
 
 
       socketIo.on('horse1Orana', (data: any) => {
@@ -224,23 +215,14 @@ export default function Home() {
         socketIo.disconnect();
 
       });
-
-
-
       
 
-      /*
-      if (socket) {
-        socket.disconnect();
-      }
-      */
-      
 
       setSocket(socketIo);
     
     /////}, [router]);
     }, []);
-
+    */
 
         
     /*
@@ -646,7 +628,7 @@ startTime=1611619200000
                     <div
                         className={`flex items-center justify-center text-base  bg-black rounded-md h-[36px] text-center px-5 text-[#BA8E09] border border-[#BA8E09] mt-3`}
                     >
-                        <span className="text-[#ffffff] text-sm">PRICE (CRA):</span>&nbsp;&nbsp;&nbsp;
+                        <span className="text-[#ffffff] text-sm">PRICE (MAM):</span>&nbsp;&nbsp;&nbsp;
                         <span className="text-sm">{Number(craUsdt).toFixed(2)}&nbsp;&nbsp;&nbsp;</span>
                         <span className="text-[#ffffff] text-sm">USDT</span>
                     </div>

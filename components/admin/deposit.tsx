@@ -37,7 +37,7 @@ export default function AdminDeposit() {
         <>
             <div className='flex flex-col items-center gap-3  border rounded-lg p-4 w-full h-full'>
                 <div className="text-ml">Total Deposit Amount</div>
-                <p>Current: <span className='text-pink-500'>{Number(depositSum).toFixed(2)}</span> CRA</p>
+                <p>Current: <span className='text-pink-500'>{Number(depositSum).toFixed(2)}</span> MAM</p>
                 
                 <Link href="/admin/dashboard/deposits" className='btn btn-md btn-primary'>See All</Link>
                 

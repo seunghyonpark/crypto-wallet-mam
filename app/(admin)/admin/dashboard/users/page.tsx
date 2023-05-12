@@ -148,7 +148,7 @@ export default function UserList() {
     },
     {
       field: "coin",
-      headerName: "Balance (CRA)",
+      headerName: "Balance (MAM)",
       flex: 0.1,
       minWidth: 120,
       align: "right",
@@ -637,7 +637,7 @@ const search = async () => {
               </DialogContentText>
 
               <DialogContentText>
-                Balance (CRA): <span className='font-bold italic'> {selectedUser?.coin} </span>
+                Balance (MAM): <span className='font-bold italic'> {selectedUser?.coin} </span>
               </DialogContentText>
 
               <DialogContentText>

@@ -414,7 +414,7 @@ export default function DepositRequestList() {
 
 
                 <h1 className='font-bold italic text-2xl text-gray-200'>Deposit Wallet Address{" "}
-                <span className="text-sm text-red-500">(CRA)</span>{" "}
+                <span className="text-sm text-red-500">(MAM)</span>{" "}
                 </h1>
                 
                 <div className="w-full border rounded-lg flex flex-col items-center justify-center p-2 gap-5 py-10">

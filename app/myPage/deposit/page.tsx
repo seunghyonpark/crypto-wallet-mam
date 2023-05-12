@@ -360,7 +360,7 @@ export default function Deposit() {
           <div className="w-full border rounded-lg flex flex-col items-center justify-top  gap-5 p-2 py-5">
 
             <h4 className=" ">
-              Deposit <span className="text-sm text-red-500">(CRA)</span>{" "}
+              Deposit <span className="text-sm text-red-500">(MAM)</span>{" "}
             </h4>
 
             <div className='w-full max-w-xs  '>
@@ -510,7 +510,7 @@ export default function Deposit() {
           {/* //? Matic Withdraw */}
           <div className="w-full border rounded-lg flex flex-col items-center justify-top gap-5 p-2 py-5">
             <h4 className=" ">
-              Withdraw <span className="text-sm text-red-500">(CRA)</span>
+              Withdraw <span className="text-sm text-red-500">(MAM)</span>
 
             {/*  
               <span className="text-sm text-green-500">{`(${settings?.requestType === 'Matic' ? "BNB" : Coin.name})`}</span>{" "}
@@ -547,7 +547,7 @@ export default function Deposit() {
                   }}
               />
 
-              <span className='absolute top-3 right-20 z-5 text-red-500'>CRA</span>
+              <span className='absolute top-3 right-20 z-5 text-red-500'>MAM</span>
 
               <button
                   onClick={() => {
@@ -563,14 +563,14 @@ export default function Deposit() {
 
 
             <div className="ml-5 mr-5 content-center text-sm text-green-500">
-                Withdraw amount is at least <br></br>1,000 ~ maximum 10,000 <span className="text-red-500">CRA</span> at a time
+                Withdraw amount is at least <br></br>1,000 ~ maximum 10,000 <span className="text-red-500">MAM</span> at a time
             </div>
 
             <div className="ml-5 mr-5 content-center text-sm text-white">
-                * Withdraw Fee <span className="text-lg font-bold">50</span> <span className="text-red-500">CRA</span>
+                * Withdraw Fee <span className="text-lg font-bold">50</span> <span className="text-red-500">MAM</span>
             </div>
             <div className="ml-5 mr-5 content-center text-sm text-white">
-                Receive Amount <span className="text-lg font-bold">{ miktar === "" || miktar < 1000 ? 0 : miktar - 50 }</span> <span className="text-red-500">CRA</span>
+                Receive Amount <span className="text-lg font-bold">{ miktar === "" || miktar < 1000 ? 0 : miktar - 50 }</span> <span className="text-red-500">MAM</span>
             </div>
  
 
@@ -646,7 +646,7 @@ export default function Deposit() {
 
                 <div className="text-sm">
                     <div className='text-white'>
-                    Requested CRA withdrawal is processed sequentially once a week.
+                    Requested MAM withdrawal is processed sequentially once a week.
                     </div>
 
                     <br></br>

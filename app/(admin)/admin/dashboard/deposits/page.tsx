@@ -583,7 +583,7 @@ export default function DepositList() {
               </DialogContentText>
 
               <DialogContentText>
-                Balance (CRA): <span className='font-bold italic'> {selectedUser?.coin} </span>
+                Balance (MAM): <span className='font-bold italic'> {selectedUser?.coin} </span>
               </DialogContentText>
 
               <DialogContentText>

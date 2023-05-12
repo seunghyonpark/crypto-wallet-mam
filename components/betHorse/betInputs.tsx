@@ -592,8 +592,8 @@ export default function BetInputs({ socket, horse1, horse2, currentPrice, setBas
                         betAmount === 0 ? '' : betAmount
                       }
                       type="number"
-                      /////placeholder='100~50000 CRA'
-                      placeholder='1~50000 CRA'
+                      /////placeholder='100~50000 MAM'
+                      placeholder='1~50000 MAM'
                       className='input w-full pl-20 text-base'
                     />
 

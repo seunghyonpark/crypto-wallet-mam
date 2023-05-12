@@ -408,7 +408,7 @@ export default function WithdrawRequestList() {
             <div className='flex flex-col p-10 mt-0 text-gray-200'>
 
                 <h1 className='font-bold italic text-2xl'>Withdraw Requests{" "}
-                <span className="text-sm text-red-500">(CRA)</span>{" "}
+                <span className="text-sm text-red-500">(MAM)</span>{" "}
                 </h1>
 
 
@@ -438,7 +438,7 @@ export default function WithdrawRequestList() {
                     />
 
                     <span className="ml-5 mr-5 content-center text-sm text-green-500">
-                        Withdrawal amount is at least 1,000 ~ maximum 10,000 CRA at a time
+                        Withdrawal amount is at least 1,000 ~ maximum 10,000 MAM at a time
                     </span>
 
                     <button onClick={paraCek} className="btn btn-accent max-w-xs w-full">Withdraw</button>
