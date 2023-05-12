@@ -94,7 +94,7 @@ export default function Footer() {
 
 
                     <div className="w-full">
-                        <Image src={"/logo.png"} width="100" height="50" alt="logo" />
+                        <Image src={"/logo.png"} width="50" height="50" alt="logo" />
                     </div>
                     <div className='w-full flex flex-col'>
                         <p>All Rights Reserved © 2023 MAM Tech</p>
