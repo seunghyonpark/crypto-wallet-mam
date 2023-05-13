@@ -279,14 +279,14 @@ export default function Navbar() {
     return (
         <>
             {/* //? LG Screen üstü görüntü */}
-            <div className="hidden items-center justify-center w-full h-20 bg-[#000000] sticky top-0 z-50 
+            <div className="hidden items-center justify-center w-full h-20 bg-[#553DF0] sticky top-0 z-50 
                 lg:flex
                 ">
 
-                <div className="flex w-[800px] items-center justify-center p-5">
+                <div className="flex w-[800px] bg-[#553DF0] items-center justify-center p-5">
 
 
-                <div className="flex flex-col pt-2 gap-3 items-center justify-center w-[200px] absolute bg-[#000000] rounded-lg h-full z-50 
+                <div className="flex flex-col pt-2 gap-3 items-center justify-center w-[200px] bg-[#553DF0]  absolute rounded-lg h-full z-50 
                      
                      ">
 
@@ -314,7 +314,7 @@ export default function Navbar() {
 
                 <div className="flex flex-col items-center justify-center w-full h-full ">
 
-                    <div className="flex items-center justify-center w-full h-full bg-[#000000] px-3 ">
+                    <div className="flex items-center justify-center w-full h-full bg-[#553DF0] px-3 ">
 
                         <div className="flex items-center w-full justify-end gap-4">
 
@@ -393,14 +393,14 @@ export default function Navbar() {
                 
             >
 
-            <div className="w-full flex flex-row items-center justify-left gap-1 bg-red-900 ">
+            <div className="w-full flex flex-row items-center justify-left gap-1 bg-[#553DF0] ">
 
               {wallet !== "0x" && 
 
                   <button
-                    className="w-full text-white text-center justify-left pl-3 p-2 items-left bg-red-900 hover:bg-[#141111] flex flex-row"
+                    className="w-full text-white text-center justify-left pl-3 p-2 items-left bg-[#553DF0] hover:bg-[#141111] flex flex-row"
                     onClick={() => {
-                      setShowModal(false), router.push('/myPage/mynft')
+                      //setShowModal(false), router.push('/myPage/mynft')
                   }}
                   >
                       <Image
@@ -419,19 +419,14 @@ export default function Navbar() {
               {wallet === "0x" && 
           
                     <button
-                      className="w-full text-white text-center justify-center p-5 items-center bg-red-900 hover:bg-[#141111] flex flex-row"
+                      className="w-full text-white text-center justify-center p-5 items-center bg-[#553DF0] hover:bg-[#141111] flex flex-row"
                       onClick={() => {
                         ///setShowModal(false), router.push('/myPage/mynft')
                       }}
                       >
-                        <Image
-                            src={"/logo.png"}
-                            alt="meta-svg"
-                            width={20}
-                            height={20}
-                        />
+      
                         <h2 className="text-sm pl-3">
-                            <span className="text-[#f5841f]">MENU</span>
+                            <span className="text-white">MENU</span>
                         </h2>
                     </button>
            
@@ -456,10 +451,9 @@ export default function Navbar() {
                     />}
 
                     <div className="w-full rounded-lg flex flex-col items-center justify-left p-2 gap-1 ">
-                      <div className='text-xs'>Equity Value (MAM)</div>
 
                       <div className='text-xl font-extrabold'>
-                        {`${Number(user?.deposit).toFixed(0)}`}
+                        {`${Number(user?.deposit).toFixed(0)}`}&nbsp;MAM
                       </div>
 
                       <div className='text-xl'>
@@ -468,19 +462,7 @@ export default function Navbar() {
                       
                       </div>
 
-                      {user &&
-                      <button
-                          className={`text-sm text-red-500`}
-                          onClick={() => {
-                            setShowModal(false);
-                            deleteCookie('user');
-                            getUser();
-                            router.push('/');
-                          }}
-                      >
-                          Log Out
-                      </button>
-                      }
+
                     </div>
                                                         
                   </div>
@@ -520,6 +502,18 @@ export default function Navbar() {
                     }}
                     >
                       History
+                  </div>
+
+                  <div
+                    className={`w-full pt-1 items-left text-base text-white `}
+                    onClick={() => {
+                        setShowModal(false);
+                        deleteCookie('user');
+                        getUser();
+                        router.push('/');
+                    }}
+                    >
+                      Log Out
                   </div>
 
 

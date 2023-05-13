@@ -26,6 +26,9 @@ import withReactContent from "sweetalert2-react-content";
 
 import Modal from '../../components/Modal';
 
+import { VscArrowRight, VscGear, VscCheck, VscError } from "react-icons/vsc";
+
+
 import MyPage from '../MyPage';
 
 //@ts-ignore
@@ -909,12 +912,12 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
               onClose={() => setShowModal(false)}
             >
 
-            <div className="w-full flex flex-row items-center justify-left gap-1 bg-green-500 ">
+            <div className="w-full flex flex-row items-center justify-left gap-1 ">
 
               {wallet !== "0x" && 
 
                   <div
-                    className="w-full text-white text-center justify-left pl-3 p-2 items-left bg-green-500 hover:bg-[#141111] flex flex-row"
+                    className="w-full text-white text-center justify-left pl-3 p-2 items-left bg-[#553DF0] hover:bg-[#141111] flex flex-row"
                     onClick={() => {
                       ///setShowModal(false), router.push('/myPage/mynft')
                   }}
@@ -935,17 +938,14 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
               {wallet === "0x" && 
           
                     <div
-                      className="w-full text-white text-center justify-center p-2 items-center bg-green-500 hover:bg-[#141111] flex flex-row"
+                      className="w-full text-white text-center justify-center p-2 items-center bg-[#553DF0] hover:bg-[#141111] flex flex-row"
                       onClick={() => {
                         ////setShowModal(false), router.push('/myPage/mynft')
                       }}
                       >
-                        <Image
-                            src={"/logo.png"}
-                            alt="meta-svg"
-                            width={20}
-                            height={20}
-                        />
+
+                        <VscGear className="fill-red-500 w-5 h-5" />
+
                         <h2 className="text-xl pl-3">
                             <span className="text-white">MENU</span>
                         </h2>

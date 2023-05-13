@@ -18,7 +18,7 @@ const Modal = ({ show, onClose, title, children } : any) => {
 
     <div
       className="
-        modal-backdrop pt-[80px] pr-[10px] opacity-100 fixed top-0 left-0 w-full h-full flex flex-row justify-center items-top bg-black bg-opacity-50
+        modal-backdrop pt-[80px] pr-[0px] opacity-100 fixed top-0 left-0 w-full h-full flex flex-row justify-center items-top bg-black bg-opacity-0
         "
       onClick={() => {
         // close modal when outside of modal is clicked
@@ -83,7 +83,7 @@ const StyledModalBody = styled.div`
 const StyledModal = styled.div`
   background: #000000;
   width: 450px;
-  height: 480px;
+  height: 680px;
   border-radius: 15px;
   padding: 0px;
   vertical-align: top;
