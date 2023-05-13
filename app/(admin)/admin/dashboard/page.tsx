@@ -31,6 +31,7 @@ export default async function Admin() {
                     <AdminWithdrawRequests />
 
                 </div>
+                {/*
                 <div className='flex gap-5 justify-center w-full h-full'>
 
                     <AdminDeposit />
@@ -43,6 +44,7 @@ export default async function Admin() {
                     <AdminFee />
 
                 </div>
+                */}
 
             </div>
         </div >

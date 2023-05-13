@@ -83,12 +83,14 @@ export default function RootLayout({
                                 <Link className={`${pathName === '/admin/dashboard/withdrawRequests' ? 'text-gray-200' : 'text-gray-500'} `} href="/admin/dashboard/withdrawRequests">
                                     Withdraw Requests
                                 </Link>
+                                {/*
                                 <Link className={`${pathName === '/admin/dashboard/banking' ? 'text-gray-200' : 'text-gray-500'} `} href="/admin/dashboard/banking">
                                     Banking
                                 </Link>
                                 <Link className={`${pathName === '/admin/dashboard/predictions' ? 'text-gray-200' : 'text-gray-500'} `} href="/admin/dashboard/predictions">
                                     Bet History
                                 </Link>
+                                */}
 
                                 {/*
                                 <Link className={`${pathName === '/admin/dashboard/settings' ? 'text-gray-200' : 'text-gray-500'} `} href="/admin/dashboard/settings">
