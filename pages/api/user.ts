@@ -195,9 +195,9 @@ export default async function handler(
       subject: `Verification Email for ${process.env.WEB_URI}`,
       html: `
         <div>
-          <p>Hello</p>
+          <h1>MAM Tech</h1>
           <p>
-            <h3>Your Auth Code: ${authCode}</h3>
+            <h2>Your Auth Code: ${authCode}</h2>
           </p>
         </div>
         `,
@@ -406,9 +406,9 @@ export default async function handler(
       subject: `Verification Withdraw for ${process.env.WEB_URI}`,
       html: `
         <div>
-          <p>Hello</p>
+          <h1>MAM Tech</h1>
           <p>
-            <h3>Your Auth Code: ${authCode}</h3>
+            <h2>Your Auth Code: ${authCode}</h2>
           </p>
         </div>
         `,

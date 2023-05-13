@@ -823,18 +823,15 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
             <div className="lg:hidden w-full flex flex-row items-center gap-2 px-2 h-20 bg-[#000000]">
 
           
-                <Link className='ml-3'
-                  href={"/"}>
-                    <Image src={"/ci.png"} width={35} height={35} alt="logo" />
-                </Link>
+                <Link className='ml-3 flex flex-row' href={"/"}>
+                  
+                  <Image src={"/ci.png"} width={35} height={35} alt="logo" />
 
-
-
-                {!user &&
-                  <div className="flex w-[250px] items-center gap-2 text-white text-sm font-bold">
+                  <div className="flex w-[250px] ml-2 items-center gap-2 text-white text-sm font-bold">
                     MAM TECH
                   </div>
-                }
+
+                </Link>
 
  
 

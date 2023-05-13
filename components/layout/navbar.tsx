@@ -289,18 +289,20 @@ export default function Navbar() {
                 <div className="flex flex-col pt-2 gap-3 items-center justify-center w-[200px] absolute bg-[#000000] rounded-lg h-full z-50 
                      
                      ">
+
                     <Link href={"/"} className="hover:opacity-50">
                         <Image src={"/ci.png"} alt="" width={35} height={35} />
+                                            
+                        <div className="flex w-[250px] items-center justify-center text-white text-base font-bold">
+                            MAM TECH
+                        </div>
                     </Link>
 
                     {/*
                     <div className=" font-normal text-xs text-gray-200 tracking-widest">Change Your Life</div>
                     */}
 
-                    
-                    <div className="flex w-[250px] items-center justify-center text-white text-base font-bold">
-                        MAM TECH
-                    </div>
+
             
                 </div>
 
