@@ -17,7 +17,7 @@ export default function Head() {
       <meta name="twitter:image" content="/metaverse.png"></meta>
   
 
-      <link rel="icon" href="/ci.png" />
+      <link rel="icon" href="/favicon.png" />
 
 
   

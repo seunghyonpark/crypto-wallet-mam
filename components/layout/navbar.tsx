@@ -291,7 +291,11 @@ export default function Navbar() {
                      ">
 
                     <Link href={"/"} className="hover:opacity-50">
-                        <Image src={"/ci.png"} alt="" width={35} height={35} />
+                        <Image
+                            className='border-1 border-[#553DF0] rounded-sm'
+                            src={"/ci.png"} alt="" width={100} height={35}
+                        />
+                        
                                             
                         <div className="flex w-[250px] items-center justify-center text-white text-base font-bold">
                             MAM TECH

@@ -820,12 +820,15 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
             <div className="lg:hidden w-full flex items-center gap-2 px-2 h-20 bg-[#24252F]">
     */}
 
-            <div className="lg:hidden w-full flex flex-row items-center gap-2 px-2 h-20 bg-[#000000]">
+            <div className="lg:hidden w-full flex flex-row items-center gap-2 px-2 h-20 bg-[#553DF0]">
 
           
                 <Link className='ml-3 flex flex-row' href={"/"}>
                   
-                  <Image src={"/ci.png"} width={35} height={35} alt="logo" />
+                  <Image
+                    className='border-1 rounded-sm'
+                    src={"/ci.png"} width={100} height={35} alt="logo"
+                  />
 
                   {!user && (
                   <div className="flex w-[150px] ml-2 items-center gap-2 text-white text-sm font-bold">
