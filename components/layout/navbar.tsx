@@ -470,14 +470,7 @@ export default function Navbar() {
                   </div>
 
 
-                  <div
-                    className={`w-full pt-1 items-left text-base text-white `}
-                    onClick={() => {
-                        setShowModal(false), router.push('/myPage')
-                    }}
-                    >
-                      My Page
-                  </div>
+
 
                   <div
                     className={` w-full pt-3 items-left text-base text-white`}
@@ -485,7 +478,16 @@ export default function Navbar() {
                         setShowModal(false), router.push('/myPage/depositRequests')
                     }}
                     >
-                    Deposit <span className="text-sm text-green-500">(MAM)</span>{" "}
+                    Wallet <span className="text-sm text-green-500">(MAM)</span>{" "}
+                  </div>
+
+                  <div
+                    className={`w-full pt-1 items-left text-base text-white `}
+                    onClick={() => {
+                        setShowModal(false), router.push('/myPage/p2pSend')
+                    }}
+                    >
+                      P2P Send <span className="text-sm text-green-500">(MAM)</span>{" "}
                   </div>
 
                   <div
@@ -497,14 +499,7 @@ export default function Navbar() {
                       Withdrawal <span className="text-sm text-green-500">(MAM)</span>{" "}
                   </div>
                   
-                  <div
-                    className={`w-full pt-1 items-left text-base text-white `}
-                    onClick={() => {
-                        setShowModal(false), router.push('/myPage/p2pSend')
-                    }}
-                    >
-                      P2P Send <span className="text-sm text-green-500">(MAM)</span>{" "}
-                  </div>
+
 
                   <div
                     className={`w-full pt-1 items-left text-base text-white `}

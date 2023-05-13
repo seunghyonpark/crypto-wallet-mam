@@ -1003,7 +1003,17 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                         setShowModal(false), router.push('/myPage/depositRequests')
                     }}
                     >
-                     Deposit <span className="text-sm text-green-500">(MAM)</span>{" "}
+                     Wallet <span className="text-sm text-green-500">(MAM)</span>{" "}
+                  </div>
+
+
+                  <div
+                    className={`w-full pt-1 items-left text-base text-white `}
+                    onClick={() => {
+                        setShowModal(false), router.push('/myPage/p2pSend')
+                    }}
+                    >
+                      P2P Send <span className="text-sm text-green-500">(MAM)</span>{" "}
                   </div>
 
                   <div
@@ -1015,14 +1025,6 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                       Withdrawal <span className="text-sm text-green-500">(MAM)</span>{" "}
                   </div>
 
-                  <div
-                    className={`w-full pt-1 items-left text-base text-white `}
-                    onClick={() => {
-                        setShowModal(false), router.push('/myPage/p2pSend')
-                    }}
-                    >
-                      P2P Send <span className="text-sm text-green-500">(MAM)</span>{" "}
-                  </div>
 
                   <div
                     className={`w-full pt-1 items-left text-base text-white `}

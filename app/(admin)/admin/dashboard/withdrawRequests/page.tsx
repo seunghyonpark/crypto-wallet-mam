@@ -76,9 +76,17 @@ export default function WithdrawRequests() {
 
         {
             field: "wallet",
-            headerName: "Wallet",
+            headerName: "To Wallet",
             flex: 0.1,
             minWidth: 400,
+            align: "center",
+            headerAlign: "center",
+        },
+        {
+            field: "emailTo",
+            headerName: "To Email",
+            flex: 0.1,
+            minWidth: 200,
             align: "center",
             headerAlign: "center",
         },
@@ -321,6 +329,7 @@ export default function WithdrawRequests() {
             type: item.type,
             status: item.status,
             wallet: item.walletTo,
+            emailTo: item.emailTo,
             createdAt: item.createdAt,
             txHash: item.txHash,
             userToken: item.userToken,

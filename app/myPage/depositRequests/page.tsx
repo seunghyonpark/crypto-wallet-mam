@@ -420,7 +420,7 @@ export default function DepositRequestList() {
 
                 <div className="w-full flex flex-row items-center justify-center gap-1 mt-1">
                     <VscGear className="fill-red-500 w-5 h-5" />
-                    <h1 className='font-bold text-xl'>Deposit{" "}
+                    <h1 className='font-bold text-xl'>Wallet{" "}
                         <span className="text-sm text-green-500">(MAM)</span>{" "}
                     </h1>
                 </div>

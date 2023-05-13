@@ -52,7 +52,7 @@ export default async function handler(
       });
     }
 
-    const withdrawFee = 50;
+    const withdrawFee = 0;
 
     ////const lastWithdrawAmount = withdrawAmount - withdrawFee;
 

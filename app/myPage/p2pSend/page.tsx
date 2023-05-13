@@ -331,8 +331,6 @@ export default function P2pSendList() {
             })
         });
 
-    
-
         const data = await res.json();
 
         if (data.status === false) {
@@ -590,13 +588,6 @@ export default function P2pSendList() {
 
                     <div className="ml-5 mr-5 content-center text-sm text-green-500">
                         Send amount is minimum 100 ~ maximum 1,000,000 <span className="text-green-500">MAM</span> at a time
-                    </div>
-
-                    <div className="ml-5 mr-5 content-center text-sm text-white">
-                        Fee <span className="text-lg font-bold">50</span> <span className="text-green-500">MAM</span>
-                    </div>
-                    <div className="ml-5 mr-5 content-center text-sm text-white">
-                        Amount <span className="text-lg font-bold">{ miktar === "" || miktar < 100 ? 0 : miktar - 50 }</span> <span className="text-green-500">MAM</span>
                     </div>
 
 
