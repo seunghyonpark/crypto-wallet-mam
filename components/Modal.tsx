@@ -101,7 +101,7 @@ const StyledModalOverlay = styled.div`
   display: flex;
   justify-content: right;
   align-items: top;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.0);
 `;
 
 export default Modal;

@@ -314,13 +314,26 @@ export default function Navbar() {
 
                             {
                             user && <div
-                                className={`flex flex-row items-center justify-center  bg-black rounded-md h-[36px] text-center px-2 text-[#BA8E09] border border-[#BA8E09] `}
+                                className={`flex flex-row items-center justify-center  bg-black rounded-md h-[36px] text-center px-2 text-[#BA8E09] border `}
                             >
 
                                 {Number(user?.deposit).toFixed(0)}
                                 
                                 
-                                &nbsp;<span className="text-red-500 text-[8px]">{" "}{Coin.symbol}</span>
+                                &nbsp;<span className="text-green-500 text-[12px]">{" "}{Coin.symbol}</span>
+                                
+
+                            </div>
+                            }
+                            {
+                            user && <div
+                                className={`flex flex-row items-center justify-center  bg-black rounded-md h-[36px] text-center px-2 text-[#BA8E09] border `}
+                            >
+
+                                {Number(user?.deposit).toFixed(0)}
+                                
+                                
+                                &nbsp;<span className="text-red-500 text-[12px]">{" "}TOL</span>
                                 
 
                             </div>

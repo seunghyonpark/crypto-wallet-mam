@@ -827,9 +827,11 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                   
                   <Image src={"/ci.png"} width={35} height={35} alt="logo" />
 
-                  <div className="flex w-[250px] ml-2 items-center gap-2 text-white text-sm font-bold">
+                  {!user && (
+                  <div className="flex w-[150px] ml-2 items-center gap-2 text-white text-sm font-bold">
                     MAM TECH
                   </div>
+                  )}
 
                 </Link>
 
@@ -842,12 +844,26 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
 
                     {
                         user && <div
-                            className={`flex items-center justify-center  bg-black rounded-md h-[38px] text-[15px] text-center px-2 ml-2 text-[#BA8E09] border border-[#BA8E09] `}
+                            className={`flex items-center justify-center  bg-black rounded-md h-[38px] text-[15px] text-center px-2 ml-2 text-[#BA8E09] border `}
                         >
 
                             {`${Number(user?.deposit).toFixed(0)}`}
                             
-                            &nbsp;<span className=" text-red-500 text-[8px]">{" "}{Coin.symbol}</span>
+                            &nbsp;<span className=" text-green-500 text-[12px]">{" "}{Coin.symbol}</span>
+
+                        </div>
+
+
+                    }
+
+                    {
+                        user && <div
+                            className={`flex items-center justify-center  bg-black rounded-md h-[38px] text-[15px] text-center px-2 ml-2 text-[#BA8E09] border `}
+                        >
+
+                            {`${Number(user?.deposit).toFixed(0)}`}
+                            
+                            &nbsp;<span className=" text-red-500 text-[12px]">{" "}TOL</span>
 
                         </div>
 
@@ -890,14 +906,14 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
               onClose={() => setShowModal(false)}
             >
 
-            <div className="w-full flex flex-row items-center justify-left gap-1 bg-red-900 ">
+            <div className="w-full flex flex-row items-center justify-left gap-1 bg-green-500 ">
 
               {wallet !== "0x" && 
 
                   <div
-                    className="w-full text-white text-center justify-left pl-3 p-2 items-left bg-red-900 hover:bg-[#141111] flex flex-row"
+                    className="w-full text-white text-center justify-left pl-3 p-2 items-left bg-green-500 hover:bg-[#141111] flex flex-row"
                     onClick={() => {
-                      setShowModal(false), router.push('/myPage/mynft')
+                      ///setShowModal(false), router.push('/myPage/mynft')
                   }}
                   >
                       <Image
@@ -916,7 +932,7 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
               {wallet === "0x" && 
           
                     <div
-                      className="w-full text-white text-center justify-center p-5 items-center bg-red-900 hover:bg-[#141111] flex flex-row"
+                      className="w-full text-white text-center justify-center p-2 items-center bg-green-500 hover:bg-[#141111] flex flex-row"
                       onClick={() => {
                         ////setShowModal(false), router.push('/myPage/mynft')
                       }}
@@ -927,8 +943,8 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                             width={20}
                             height={20}
                         />
-                        <h2 className="text-sm pl-3">
-                            <span className="text-[#f5841f]">MENU</span>
+                        <h2 className="text-xl pl-3">
+                            <span className="text-white">MENU</span>
                         </h2>
                     </div>
            
@@ -953,34 +969,20 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                     />}
 
                     <div className="w-full rounded-lg flex flex-col items-center p-2 gap-1 ">
-                      <div className='text-xs'>Equity Value (MAM)</div>
 
                       <div className='text-xl font-extrabold'>
-                        {`${Number(user?.deposit).toFixed(0)}`}
+                        {`${Number(user?.deposit).toFixed(0)}`} &nbsp;MAM
                       </div>
 
                       <div className='text-xl'>
                       ≒&nbsp;{ user?.deposit ? `${Number(user?.deposit * craUsdt).toFixed(0)}` : `0` }&nbsp;&nbsp;<span className="text-[8px] text-green-500">USDT</span>
                       </div>
 
-                      {user &&
-                      <button
-                          className={`text-sm text-red-500`}
-                          onClick={() => {
-                            setShowModal(false);
-                            deleteCookie('user');
-                            //////getUser();
-                            router.push('/');
-                          }}
-                      >
-                          Log Out
-                      </button>
-                      }
                     </div>
                                                         
                   </div>
 
-
+{/*
                   <div
                     className={`w-full pt-1 items-left text-base text-white `}
                     onClick={() => {
@@ -989,6 +991,8 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                     >
                       My Page
                   </div>
+                  */}
+
 
                   <div
                     className={` w-full pt-3 items-left text-base text-white `}
@@ -1015,6 +1019,19 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                     }}
                     >
                       History
+                  </div>
+
+                  <div
+                    className={`w-full pt-1 items-left text-base text-white `}
+                    onClick={() => {
+                      setShowModal(false);
+                      deleteCookie('user');
+                      //////getUser();
+                      router.push('/');
+                        
+                    }}
+                    >
+                      Log Out
                   </div>
 
 

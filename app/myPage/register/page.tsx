@@ -691,7 +691,9 @@ export default function RegisterPage() {
                 className="label ml-3">
                     <span className="label-text">
                     I have read and agree to the User Agreement and Privacy Policy.
+                    {/*
                     &nbsp;<Link  href="/gameT2E/terms"><span className="text-bold text-blue-500">(See Details)</span></Link>
+                    */}
                     </span>
             </label>
         </div>

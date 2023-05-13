@@ -651,6 +651,7 @@ startTime=1611619200000
 
   items-center justify-top
   bg-black
+  rounded-xl
   ">
 
           <div className="
@@ -680,7 +681,19 @@ startTime=1611619200000
 
 </div>
 
-<div className="w-[380px] h-[250px] mt-16 p-5 items-left justify-end">
+{!user && (
+<div className="pt-0 pb-0 flex flex-col items-center justify-center text-center gap-3">
+      <div className=""> If you have not an account  </div>
+      <Link
+          className="p-2 px-4 rounded-md bg-[#FFD369] text-gray-600 text-xl font-bold  "
+          href={"/myPage/register"}
+      >
+          Sign Up Now
+      </Link>
+  </div>
+)}
+
+<div className="w-[380px] h-[250px] mt-5 mb-5 p-5 items-left justify-end">
 <Carousel autoPlay={true}>
     <div>
       <Image
@@ -713,15 +726,7 @@ startTime=1611619200000
 </div>
 
 
-  <div className="pt-0 pb-10 flex flex-col items-center justify-center text-center gap-3">
-      <div className=""> If you have not an account  </div>
-      <Link
-          className="p-2 px-4 rounded-md bg-[#FFD369] text-gray-600 text-xl font-bold  "
-          href={"/myPage/register"}
-      >
-          Sign Up Now
-      </Link>
-  </div>
+
 
 
 
