@@ -136,33 +136,16 @@ export default function P2pSendList() {
 
         },
         {
-            field: "status",
-            headerName: "Status",
+            field: "wallet",
+            headerName: "To Wallet",
+            flex: 0.1,
+            minWidth: 100,
             align: "center",
             headerAlign: "center",
-            description: "This column has a value getter and is not sortable.",
-            flex: 0.1,
-            minWidth: 220,
-            renderCell(params) {
-                return <>
-                    <Chip
-                        label={params.value}
-                        color={params.value === "Rejected" ? "error" : params.value === "Accepted and Paid" ? "info" : params.value === "Waiting" ? "warning" : "success"}
-                    />
-                    {params.value === "Accepted and Paid" && (
-                        <Link
-                            href={"https://bscscan.com/tx/"+params.row.txHash}
-                            className="ml-2 flex items-center justify-center">
-                            <span className="text-yellow-600 text-sm ">Tx Hash</span>
-                        </Link>
-                    )}
-                </>
-                
-            },
         },
         {
-            field: "wallet",
-            headerName: "To",
+            field: "emailTo",
+            headerName: "To Email",
             flex: 0.1,
             minWidth: 100,
             align: "center",
@@ -419,6 +402,7 @@ export default function P2pSendList() {
             type: item.type,
             status: item.status,
             wallet: item.walletTo,
+            emailTo: item.emailTo,
             createdAt: item.createdAt,
             txHash: item.txHash,
             userToken: item.userToken,
