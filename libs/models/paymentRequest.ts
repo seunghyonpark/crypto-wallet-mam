@@ -1,6 +1,8 @@
 import mongoose, { model, models, Schema } from "mongoose";
 import connectMongo from "../services/database";
 
+import { User } from "./user";
+
 connectMongo();
 
 export const paymentRequestSchema = new Schema({
@@ -39,6 +41,10 @@ export const paymentRequestSchema = new Schema({
     type: String,
     required: true,
   },
+  emailTo: {
+    type: String,
+    required: true,
+  },
   gonderildi: {
     type: Boolean,
     default: false,
@@ -63,22 +69,41 @@ export const newPaymentRequest = async (
   withdrawAmount: number,
   withdrawFee: number,
   walletTo: string,
+  emailTo: string,
   type: string,
+  status: string,
 ) => {
 
 
+
   const newPaymentRequest = new PaymentRequest({
-    userToken,
-    email1,
-    withdrawAmount,
-    withdrawFee,
-    walletTo,
-    type,
+    userToken: userToken,
+    email1: email1,
+    withdrawAmount: withdrawAmount,
+    withdrawFee: withdrawFee,
+    walletTo: walletTo,
+    emailTo: emailTo,
+    type: type,
     emailVerified: true,
+    status: status,
   });
+
   if (!newPaymentRequest) {
     return null;
   }
+
+  const user = await User.findOne({ userToken: userToken });
+  if (user) {
+    user.deposit -= withdrawAmount;
+    await user.save();
+  }
+
+  const userTo = await User.findOne({ email: emailTo });
+  if (userTo) {
+    userTo.deposit += (withdrawAmount-withdrawFee);
+    await userTo.save();
+  }
+
   return await newPaymentRequest.save();
 };
 

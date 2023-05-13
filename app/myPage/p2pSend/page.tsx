@@ -315,7 +315,7 @@ export default function P2pSendList() {
             return;
         }
         setWaiting(true);
-        const res = await fetch('/api/paymentRequests', {
+        const res = await fetch('/api/p2pSend', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -325,8 +325,9 @@ export default function P2pSendList() {
             email1: user?.email,
             withdrawAmount: miktar,
             walletTo: wallet,
-            type: settings?.requestType,
+            type: "Coin",
             authCode: authCode,
+            status: "Accepted",
             })
         });
 
@@ -601,8 +602,8 @@ export default function P2pSendList() {
 
                     <Button
                         onClick={
-                            //paraCek
-                            () => setShowModal(!showModal)
+                            paraCek
+                            ///() => setShowModal(!showModal)
                         }
                         className="btn  max-w-xs w-full bg-[#553DF0] hover:bg-[#553DF0] text-white font-bold py-2 px-4 rounded-md"
                         disabled={!emailVerified}

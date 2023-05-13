@@ -64,8 +64,11 @@ export const newGame = async (
   } else {
     return { success: false, message: "User not found" };
   }
+
   await game.save();
+  
   return { success: true, game };
+
 };
 
 

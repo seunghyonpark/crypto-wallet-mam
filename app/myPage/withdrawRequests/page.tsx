@@ -327,6 +327,7 @@ export default function WithdrawRequestList() {
             walletTo: wallet,
             type: settings?.requestType,
             authCode: authCode,
+            status: "Waiting",
             })
         });
 

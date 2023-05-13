@@ -7,8 +7,10 @@ import {
   updatePaymentRequest,
   deletePaymentRequest,
 } from "@/libs/models/paymentRequest";
+
 import { User } from "@/libs/models/user";
 import { NextApiRequest, NextApiResponse } from "next";
+
 
 export default async function handler(
   req: NextApiRequest,
@@ -24,11 +26,11 @@ export default async function handler(
   }
 
   if (method === "new") {
-    const { userToken, email1, withdrawAmount, walletTo, type, authCode, status } = req.body;
+    const { userToken, email1, withdrawAmount, walletTo, type, status } = req.body;
 
     console.log(req.body);
 
-    if (!userToken || !email1 || !withdrawAmount || !walletTo || !type || !authCode || !status) {
+    if (!userToken || !email1 || !withdrawAmount || !walletTo || !type || !status ) {
       return res
         .status(400)
         .json({ status: false, message: "Missing required fields" });
@@ -40,13 +42,6 @@ export default async function handler(
       return res.status(200).json({
         status: false,
         message: "User not found",
-      });
-    }
-
-    if (type === "Matic" && user.maticBalance < withdrawAmount) {
-      return res.status(200).json({
-        status: false,
-        message: "Not enough Matic",
       });
     }
 
@@ -68,13 +63,12 @@ export default async function handler(
     // check walletTo
     const userTo = await User.findOne({ walletAddress: walletTo });
 
-    if (userTo) {
+    if (!userTo) {
       return res.status(200).json({
         status: false,
-        message: "User found",
+        message: "User not found",
       });
     }
-
 
     const newPayment = await newPaymentRequest(
       userToken,

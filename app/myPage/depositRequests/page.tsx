@@ -519,7 +519,7 @@ export default function DepositRequestList() {
 
                                 <Button
                                     ///color="success" variant='contained' className='bg-green-500'
-                                    className="btn  max-w-xs btn-primary bg-[#553DF0] hover:bg-[#553DF0] btn-disabled text-white font-bold py-2 px-4 rounded-md"
+                                    className="btn  max-w-xs bg-[#553DF0] hover:bg-[#553DF0] text-white font-bold py-2 px-4 rounded-md"
                                     onClick={() =>
                                         {
                                         navigator.clipboard.writeText(user?.walletAddress);
