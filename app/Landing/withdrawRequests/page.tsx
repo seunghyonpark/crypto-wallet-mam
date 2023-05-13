@@ -460,12 +460,6 @@ export default function WithdrawRequestList() {
 
                     
 
-                    <span className="ml-5 mr-5 content-center text-sm text-green-500">
-                        Only BNB Smart Chain (BEP20) Available
-                    </span>
-
-                    
-
                     <input
                     type="number"
                     placeholder="Minimum 1,000"
