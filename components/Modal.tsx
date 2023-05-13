@@ -70,7 +70,7 @@ const StyledModalHeader = styled.div`
   padding-right: 12px;
   justify-content: flex-end;
   font-size: 25px;
-  color: #ffffff;
+  color: #000000;
 `;
 
 const StyledModalBody = styled.div`
@@ -81,7 +81,7 @@ const StyledModalBody = styled.div`
 
 
 const StyledModal = styled.div`
-  background: #24252F;
+  background: #000000;
   width: 450px;
   height: 480px;
   border-radius: 15px;
@@ -101,7 +101,7 @@ const StyledModalOverlay = styled.div`
   display: flex;
   justify-content: right;
   align-items: top;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 1.0);
 `;
 
 export default Modal;

@@ -104,54 +104,7 @@ export default function BetHistoryList() {
             },
         },
     
-        {
-            field: "selectedSide",
-            headerName: "SELECT",
-            align: "center",
-            headerAlign: "center",
-            flex: 0.2,
-            minWidth: 100,
 
-            renderCell: (params) => {
-                if (params.value === "Long") {
-                    return (
-                        <div className='font-bold text-green-500'>
-                            LONG
-                        </div>
-                    );
-                } else {
-                    return (
-                        <div className='font-bold text-red-500'>
-                        SHORT
-                    </div>
-                    );
-                }
-            },
-        },
-        {
-            field: "basePrice",
-            type: "number",
-            headerName: "ENTRY",
-            flex: 0.1,
-            minWidth: 80,
-            align: "center",
-            headerAlign: "center",
-            valueFormatter: (params) => {
-                return new Number(params.value).toFixed(2);
-            },
-        },
-        {
-            field: "closePrice",
-            type: "number",
-            headerName: "LAST",
-            flex: 0.1,
-            minWidth: 80,
-            align: "center",
-            headerAlign: "center",
-            valueFormatter: (params) => {
-                return new Number(params.value).toFixed(2);
-            },
-        },
         {
             field: "winnerHorse",
             headerName: "END",
@@ -353,89 +306,19 @@ export default function BetHistoryList() {
 
 
 
-                <div className="w-full border rounded-lg flex flex-col items-center justify-center p-2 gap-1 py-5">
-                    <h4 className="  text-red-500 text-xl font-bold">
-                        T2E <span className="text-white">GAME</span>
-                    </h4>
-
-                    <h4 className=" text-red-500 text-xl font-bold">
-                        Recent Bettings
-                    </h4>
-
-
-
-
-                    {
-                        (rows[0]?.prizeAmount - rows[0]?.betAmount) > 0 &&
-
-                        <div className="w-full flex flex-col items-center justify-center">
-                            <div className=" text-white text-xl font-extrabold">
-                                WIN
-                            </div>
-                            <div className=" text-white text-6xl font-extrabold ">
-                                + {Number(rows[0]?.prizeAmount - rows[0]?.betAmount).toFixed(0)}
-                            </div>
-                        </div>
-                    }
-
-
-                    {
-                        (rows[0]?.prizeAmount - rows[0]?.betAmount) < 0 &&
-
-                        <div className="w-full flex flex-col items-center justify-center">
-                            <div className=" text-white text-xl font-extrabold">
-                                LOSE
-                            </div>
-                            <div className=" text-white text-6xl font-extrabold ">
-                                - {Number(rows[0]?.betAmount).toFixed(0)}
-                            </div>
-                        </div>
-                    }
-
-
-
-                    <h4 className=" text-white text-sm font-bold">
-                        Betting Time:&nbsp;
-                        {
-                            new Date(rows[0]?.date).toLocaleString()
-                            //new Date(rows[0]?.date).getTime() + 1000 * 60 * 60 * 24
-                             //new Date(rows[0]?.date)
-                            //format(date, "yyyy.MM.dd HH:mm:ss");
-                        }
-                                    
-                                   
-                        
-                    </h4>
-                    <h4 className=" text-white text-sm font-bold">
-                        Entry Price: {Number(rows[0]?.basePrice).toFixed(2)}
-                    </h4>
-                    <h4
-                        className=" text-white text-sm font-bold"
-                        style={{
-                            color: `${(rows[0]?.basePrice - rows[0]?.closePrice) > 0 ? "rgb(239 68 68)" : "rgb(34 197 94)" }`,
-                        }}
-                    >
-                        Last Price: {Number(rows[0]?.closePrice).toFixed(2)} 
-
-                    </h4>
-
-                </div>
-
                 <div className="w-full flex items-center justify-center p-3">
 
-                        <button
+                    <button
                     onClick={() => {
-                        ////paraYatir();
-                        push( '/gameT2E' );
+                     
                     }}
-                    className="btn btn-success max-w-xs w-full text-xl bg-color-#66CDAA hover:bg-color-#66CDAA  text-white font-bold py-2 px-4 rounded-full"
+                    className="btn btn-success max-w-xs w-full text-xl bg-color-#66CDAA hover:bg-color-#66CDAA  text-white font-bold py-2 px-0 rounded-md "
                     >
-                    GO BET
+                    HISTORY
                     </button>
                 </div>
 
 
-                <h1 className='text-sm mt-5'>YOUR BET HISTORY</h1>
                 <div className="mt-5" style={{ width: "100%", height: 600, color: "white" }}>
 
                 {rows && (
