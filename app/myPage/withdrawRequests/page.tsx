@@ -584,7 +584,7 @@ export default function WithdrawRequestList() {
                             </span>
 
                             <Button
-                                className="btn  max-w-xs btn-primary bg-[#553DF0] hover:bg-[#553DF0] btn-disabled text-white font-bold py-2 px-4 rounded-md"
+                                className="btn  max-w-xs bg-[#553DF0] hover:bg-[#553DF0] btn-disabled text-white font-bold py-2 px-4 rounded-md"
                                 //variant="contained"
                                 //variant="outlined" 
                                 //sx={{ width: 300 }}

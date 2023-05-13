@@ -604,7 +604,7 @@ export default function P2pSendList() {
                             //paraCek
                             () => setShowModal(!showModal)
                         }
-                        className="btn  max-w-xs w-full btn-primary bg-[#553DF0] hover:bg-[#553DF0] text-white font-bold py-2 px-4 rounded-md"
+                        className="btn  max-w-xs w-full bg-[#553DF0] hover:bg-[#553DF0] text-white font-bold py-2 px-4 rounded-md"
                         disabled={!emailVerified}
                     >
                             Send
