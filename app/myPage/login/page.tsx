@@ -139,15 +139,7 @@ export default function LoginPage() {
                         Login
                     </Button>
                 </div>
-                <div className="pt-5 flex flex-col items-center justify-center text-center gap-3">
-                    <div className=""> If you have not an account  </div>
-                    <Link
-                        className="p-2 px-4 rounded-md bg-[#FFD369] text-gray-500  "
-                        href={"/myPage/register"}
-                    >
-                        Sign Up Now
-                    </Link>
-                </div>
+
                 <div className="pt-5 flex flex-col items-center justify-center text-center gap-3">
                     <div className=""> If you forgot your password  </div>
                     <Link

@@ -37,6 +37,10 @@ import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
+
 // code for web3
 import {
     useActiveClaimConditionForWallet,
@@ -676,17 +680,50 @@ startTime=1611619200000
 
 </div>
 
+<div className="w-[380px] h-[250px] mt-16 p-5 items-left justify-end">
+<Carousel autoPlay={true}>
+    <div>
+      <Image
+        src="/metaverse.png"
+        alt="Picture of the author"
+        width={350}
+        height={120}
+      />
 
-<div className="w-[350px] h-[300px] mt-16 p-5 items-left justify-end">
+    </div>
+    <div>
+      <Image
+        src="/metaverse3.jpeg"
+        alt="Picture of the author"
+        width={350}
+        height={120}
+      />
 
-  <Image
-    src="/metaverse.png"
-    alt="Picture of the author"
-    width={350}
-    height={120}
-  />
+    </div>
+    <div>
+      <Image
+        src="/metaverse2.png"
+        alt="Picture of the author"
+        width={350}
+        height={120}
+      />
 
+    </div>
+</Carousel>
 </div>
+
+
+  <div className="pt-0 pb-10 flex flex-col items-center justify-center text-center gap-3">
+      <div className=""> If you have not an account  </div>
+      <Link
+          className="p-2 px-4 rounded-md bg-[#FFD369] text-gray-600 text-xl font-bold  "
+          href={"/myPage/register"}
+      >
+          Sign Up Now
+      </Link>
+  </div>
+
+
 
         </div>
 
