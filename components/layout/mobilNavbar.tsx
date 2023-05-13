@@ -867,7 +867,7 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                             className={`flex items-center justify-center  bg-black rounded-md h-[38px] text-[15px] text-center px-2 ml-2 text-[#BA8E09] border `}
                         >
 
-                            {`${Number(user?.deposit).toFixed(0)}`}
+                            {0}
                             
                             &nbsp;<span className=" text-red-500 text-[12px]">{" "}TOL</span>
 

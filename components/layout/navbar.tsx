@@ -336,7 +336,7 @@ export default function Navbar() {
                                 className={`flex flex-row items-center justify-center  bg-black rounded-md h-[36px] text-center px-2 text-[#BA8E09] border `}
                             >
 
-                                {Number(user?.deposit).toFixed(0)}
+                                {0}
                                 
                                 
                                 &nbsp;<span className="text-red-500 text-[12px]">{" "}TOL</span>
