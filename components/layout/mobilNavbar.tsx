@@ -827,14 +827,14 @@ export default function MobilNavbar({user, game} : {user: any, game: any}) {
                   
                   <Image
                     className='border-1 rounded-sm'
-                    src={"/ci.png"} width={100} height={35} alt="logo"
+                    src={"/ci.png"} width={80} height={30} alt="logo"
                   />
 
-                  {!user && (
+                  {/*!user && (
                   <div className="flex w-[150px] ml-2 items-center gap-2 text-white text-sm font-bold">
                     MAM TECH
                   </div>
-                  )}
+                  )*/}
 
                 </Link>
 

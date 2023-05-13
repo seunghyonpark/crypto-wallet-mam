@@ -296,10 +296,12 @@ export default function Navbar() {
                             src={"/ci.png"} alt="" width={100} height={35}
                         />
                         
-                                            
+
+                           {/*                 
                         <div className="flex w-[250px] items-center justify-center text-white text-base font-bold">
                             MAM TECH
                         </div>
+                        */}
                     </Link>
 
                     {/*
