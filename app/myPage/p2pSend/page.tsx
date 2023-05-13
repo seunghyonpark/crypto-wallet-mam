@@ -33,7 +33,7 @@ const Transition = React.forwardRef(function Transition(
 
 
 
-export default function WithdrawRequestList() {
+export default function P2pSendList() {
     const [requests, setRequests] = useState<any>([]);
     const [open, setOpen] = React.useState(false);
     const [selectedUser, setSelectedUser] = useState<any>();
@@ -60,7 +60,7 @@ export default function WithdrawRequestList() {
     const [authCodeState, setAuthCodeState] = useState(false);
     const [authCode, setAuthCode] = useState<any>(null);
 
-    const [emailVerified, setEmailVerified] = useState(false);
+    const [emailVerified, setEmailVerified] = useState(true);
 
 
   
@@ -305,12 +305,12 @@ export default function WithdrawRequestList() {
 
         ////let miktar = (document.getElementById("withdraw") as HTMLInputElement).value;
 
-        if (parseInt(miktar) < 1000) {
-            setErrMsgSnackbar("Please enter a value greater than 1000");
+        if (parseInt(miktar) < 100) {
+            setErrMsgSnackbar("Please enter a value greater than 100");
             setErr(true);
             return;
-        } else if (parseInt(miktar) > 10000) {
-            setErrMsgSnackbar("Please enter a value less than 10000");
+        } else if (parseInt(miktar) > 1000000) {
+            setErrMsgSnackbar("Please enter a value less than 1000000");
             setErr(true);
             return;
         }
@@ -537,72 +537,12 @@ export default function WithdrawRequestList() {
 
                 <div className="w-full flex flex-row items-center justify-center gap-1 mt-1">
                     <VscGear className="fill-red-500 w-5 h-5" />
-                    <h1 className='font-bold text-xl'>Withdrawal{" "}
+                    <h1 className='font-bold text-xl'>P2P Send{" "}
                         <span className="text-sm text-green-500">(MAM)</span>{" "}
                     </h1>
                 </div>
 
                 <div className="w-full mt-2 border rounded-lg flex flex-col items-center p-4 justify-center gap-5">
-
-                    {
-                    emailVerified &&
-                    <div className=" w-full flex flex-row items-center justify-center gap-1 mt-1">
-                            <span className="text-green-500">Withdraw Request Verified</span>
-                            <VscCheck className=" ml-2 w-4 h-4 text-green-500" />
-                        </div>
-                    }
-
-
-                    {authCodeState && !emailVerified &&
-
-                        <>
-                            <div className=" w-full flex flex-row gap-5 mt-2">
-                                <input
-                                    type="number"
-                                    placeholder="Auth Code"
-                                    id="authCode"
-                                    onChange={(e) => {
-                                        setAuthCode(e.target.value);
-                                    }}
-                                    className="input input-bordered w-full max-w-xs text-gray-800 mb-5"
-                                />
-
-                                <Button variant="outlined" color="primary" className=" w-full h-12 " onClick={() => {
-                                    verifyUserByEmail();
-                                }}> Verify </Button>
-                            </div>
-
-                        </>
-                    }
-
-                    {user?.emailVerified && !authCodeState &&
-
-                        <div className=" w-full flex flex-row gap-5">
-
-                            <span className=" text-sm text-green-500">
-                                Email verification
-                            </span>
-
-                            <Button
-                                className="btn  max-w-xs btn-primary bg-[#553DF0] hover:bg-[#553DF0] btn-disabled text-white font-bold py-2 px-4 rounded-md"
-                                //variant="contained"
-                                //variant="outlined" 
-                                //sx={{ width: 300 }}
-                                //color="primary" 
-                                onClick={() => {
-                                    sendAuthCode();
-                                }}
-                            >
-                                Send Auth Code
-                            </Button>
-
-                        </div>
-                    }
-
-
-
-
-
 
 
                     <div className='w-full max-w-xs md:w-1/2 relative'>
@@ -623,7 +563,7 @@ export default function WithdrawRequestList() {
                     <div className='w-full max-w-xs md:w-1/2 relative'>
 
                         <input
-                            placeholder="Minimum 1,000"
+                            placeholder="Minimum 100"
                             id="withdraw"
                             value={miktar}
                             className="input input-bordered w-full max-w-xs text-gray-800"
@@ -637,7 +577,7 @@ export default function WithdrawRequestList() {
 
                         <button
                             onClick={() => {
-                                user?.deposit && user?.deposit > 10000 ? setMiktar("10000") : setMiktar(user?.deposit)
+                                user?.deposit && user?.deposit > 1000000 ? setMiktar("1000000") : setMiktar(user?.deposit)
                             }}
                             className='absolute top-3 right-5 z-5 btn btn-xs text-yellow-500 border-yellow-500 hover:bg-white bg-white '
                         >
@@ -648,14 +588,14 @@ export default function WithdrawRequestList() {
 
 
                     <div className="ml-5 mr-5 content-center text-sm text-green-500">
-                        Withdraw amount is at least <br></br>1,000 ~ maximum 10,000 <span className="text-green-500">MAM</span> at a time
+                        Send amount is minimum 100 ~ maximum 1,000,000 <span className="text-green-500">MAM</span> at a time
                     </div>
 
                     <div className="ml-5 mr-5 content-center text-sm text-white">
                         Fee <span className="text-lg font-bold">50</span> <span className="text-green-500">MAM</span>
                     </div>
                     <div className="ml-5 mr-5 content-center text-sm text-white">
-                        Amount <span className="text-lg font-bold">{ miktar === "" || miktar < 1000 ? 0 : miktar - 50 }</span> <span className="text-green-500">MAM</span>
+                        Amount <span className="text-lg font-bold">{ miktar === "" || miktar < 100 ? 0 : miktar - 50 }</span> <span className="text-green-500">MAM</span>
                     </div>
 
 
@@ -664,10 +604,10 @@ export default function WithdrawRequestList() {
                             //paraCek
                             () => setShowModal(!showModal)
                         }
-                        className="btn  max-w-xs w-full btn-primary bg-[#553DF0] hover:bg-[#553DF0] btn-disabled text-white font-bold py-2 px-4 rounded-md"
-                        //disabled={!emailVerified}
+                        className="btn  max-w-xs w-full btn-primary bg-[#553DF0] hover:bg-[#553DF0] text-white font-bold py-2 px-4 rounded-md"
+                        disabled={!emailVerified}
                     >
-                            Withdraw
+                            Send
                     </Button>
 
                 </div>

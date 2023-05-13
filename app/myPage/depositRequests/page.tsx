@@ -12,6 +12,8 @@ import { format } from "date-fns";
 import { IUser } from "@/libs/interface/user";
 import Link from 'next/link';
 
+import { VscArrowRight, VscGear, VscCheck, VscError } from "react-icons/vsc";
+
 import { Stack, Snackbar, Alert } from "@mui/material";
 
 import { useQRCode } from 'next-qrcode';
@@ -413,16 +415,17 @@ export default function DepositRequestList() {
 
     return (
         <>
-            <div className='flex flex-col p-10 mt-0 text-gray-800'>
+            <div className='flex flex-col p-5 mt-0 text-gray-200'>
 
 
-                <h1 className='font-bold italic text-2xl text-gray-200'>Deposit Wallet Address{" "}
-                <span className="text-sm text-red-500">(MAM)</span>{" "}
-                </h1>
+                <div className="w-full flex flex-row items-center justify-center gap-1 mt-1">
+                    <VscGear className="fill-red-500 w-5 h-5" />
+                    <h1 className='font-bold text-xl'>Deposit{" "}
+                        <span className="text-sm text-green-500">(MAM)</span>{" "}
+                    </h1>
+                </div>
                 
-                <div className="w-full border rounded-lg flex flex-col items-center justify-center p-2 gap-5 py-10">
-
-
+                <div className="w-full mt-2 border rounded-lg flex flex-col items-center p-4 justify-center gap-5">
 
                     <div className='w-full max-w-xs md:w-1/2 '>
 
@@ -515,7 +518,8 @@ export default function DepositRequestList() {
                                 */}
 
                                 <Button
-                                    color="success" variant='contained' className='bg-green-500'
+                                    ///color="success" variant='contained' className='bg-green-500'
+                                    className="btn  max-w-xs btn-primary bg-[#553DF0] hover:bg-[#553DF0] btn-disabled text-white font-bold py-2 px-4 rounded-md"
                                     onClick={() =>
                                         {
                                         navigator.clipboard.writeText(user?.walletAddress);
@@ -538,7 +542,7 @@ export default function DepositRequestList() {
                                 width: 200,
                                 color: {
                                     dark: '#010599FF',
-                                    light: '#FFBF60FF',
+                                    light: '#FFFFFF',
                                 },
                                 }}
                                 />
